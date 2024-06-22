@@ -1,0 +1,55 @@
+@media (min-width: 992px) {
+  .menu-item-has-children {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 8px;
+      height: 4px;
+      background-image: url("../images/dest/icons/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    span {
+      padding: 30px 20px 30px 0 !important;
+    }
+
+    a {
+      padding: 10px 5px !important;
+      font-size: 14px !important;
+    }
+  }
+
+  .menu-item-has-children ul {
+    padding: 20px 30px;
+    width: 245px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all .2s ease;
+    border-radius: 20px;
+    background: rgba(254, 241, 222, 0.95);
+
+  }
+
+  .menu-item-has-children:hover>ul {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

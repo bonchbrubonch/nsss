@@ -1,0 +1,43 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(14, 10, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 3%;
+  text-align: left;
+  border-radius: 50px;
+  height: 60px;
+  padding: 10px 30px;
+  cursor: pointer;
+  width: fit-content;
+  transition: linear .2s;
+  border: 1px solid transparent;
+  &:hover {
+    background-color: rgb(0, 149, 212);
+    color: #fff;
+    border-color: #fff;
+  }
+
+  &--blue {
+    color: #0095D4;
+    border: 1px solid rgb(0, 149, 212);
+  }
+  &--blue-bg{
+    background-color: #0095D4;
+    color: #fff;
+  }
+  &--yellow {
+    background-color: #FFCC40;
+  }
+
+  &--transparent {
+    border: 1px solid rgb(14, 10, 1);
+    background-color: transparent;
+  }
+  &--white{
+    background-color: #fff;
+  }
+}
