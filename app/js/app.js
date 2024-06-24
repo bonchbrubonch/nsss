@@ -1,3 +1,4 @@
+/*circle text*/ 
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector('.emblem')) {
     var Emblem = {
@@ -25,12 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 var swiper = new Swiper(".intro__slider", {
-  slidesPerView: 1.5,
-  spaceBetween: 50,
+  slidesPerView: 1.2,
+  spaceBetween: 20,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    992: {
+      spaceBetween: 50,
+      slidesPerView: 1.5,
+    },
   },
 });
 
@@ -49,6 +56,31 @@ document.addEventListener("DOMContentLoaded", function() {
           const videoSrc = videoIframe.getAttribute("src");
           videoIframe.setAttribute("src", videoSrc + "?autoplay=1");
           videoIframe.play();
+        }
+      }
+    });
+  });
+});
+
+/*header*/
+document.querySelector(".header__menu-btn").addEventListener("click", function () {
+  document.querySelector(".header nav").classList.toggle("open");
+  this.classList.toggle("active");
+  document.body.classList.toggle("lock");
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuItems = document.querySelectorAll(".menu-item-has-children");
+
+  menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener("click", function() {
+      const subMenu = menuItem.querySelector(".sub-menu");
+      if (subMenu) {
+        if (subMenu.style.display === "flex") {
+          subMenu.style.display = "none";
+        } else {
+          subMenu.style.display = "flex";
         }
       }
     });

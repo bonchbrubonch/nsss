@@ -1,0 +1,40 @@
+.list {
+  margin: 0 0 20px 0;
+  li {
+    margin: 0 0 5px 0;
+    position: relative;
+    padding: 0 0 0 20px;
+    color: rgb(14, 10, 1);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &--green {
+    li {
+      &::after {
+        background-color: #72BF44;
+      }
+    }
+
+  }
+
+  &--blue {
+    li {
+      &::after {
+        background-color: #0095D4;
+      }
+    }
+
+  }
+}
