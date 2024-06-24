@@ -41,26 +41,6 @@ var swiper = new Swiper(".intro__slider", {
   },
 });
 
-/*start play video===========*/
-document.addEventListener("DOMContentLoaded", function() {
-  const videoImgs = document.querySelectorAll(".video__img");
-
-  videoImgs.forEach(function(videoImg) {
-    videoImg.addEventListener("click", function() {
-      const videoInner = this.closest(".video__inner");
-      if (videoInner) {
-        videoInner.classList.add("play");
-
-        const videoIframe = videoInner.querySelector(".video__bg");
-        if (videoIframe) {
-          const videoSrc = videoIframe.getAttribute("src");
-          videoIframe.setAttribute("src", videoSrc + "?autoplay=1");
-          videoIframe.play();
-        }
-      }
-    });
-  });
-});
 
 /*header*/
 document.querySelector(".header__menu-btn").addEventListener("click", function () {
@@ -86,3 +66,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+/*accordion*/ 
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".accordion-item");
+
+  items.forEach((item) => {
+    item.addEventListener("click", function () {
+      if (!this.classList.contains("active")) {
+        closeAllAccordions();
+        this.classList.add("active");
+      }
+    });
+  });
+
+  // Open the first accordion item on load
+  items[0].classList.add("active");
+});
+
+function closeAllAccordions() {
+  const items = document.querySelectorAll(".accordion-item");
+  items.forEach((item) => {
+    item.classList.remove("active");
+  });
+}

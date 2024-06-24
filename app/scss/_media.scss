@@ -249,7 +249,9 @@
     padding: 70px 20px 70px 335px;
   }
 
-
+  .preference--team .preference__item {
+    width: calc(33.33333% - 25px);
+  }
 
 
 
@@ -405,7 +407,7 @@
   }
 
   .u-intro h1 {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .instruction strong,
@@ -418,17 +420,39 @@
     font-size: 16px;
   }
 
-  .meet__item span {
-    font-size: 16px;
+  .meet__item span,
+  .team__img+h6 {
+    font-size: 14px;
   }
 
   .meet__item p {
     margin: 0 0 20px 0;
   }
 
+  .accordion-item {
+    padding: 20px 20px 15px 20px;
+    margin: 0 0 20px 0;
+  }
 
+  .accordion-item.active {
+    border-radius: 30px;
+  }
 
+  .accordion-title {
+    font-size: 16px;
+  }
 
+  .faq {
+    padding: 20px 0 70px;
+  }
+
+  .team {
+    margin: 40px 0 35px;
+  }
+
+  .team-line h6 {
+    font-size: 20px;
+  }
 
 
 
@@ -540,7 +564,7 @@
   }
 
   .preference__item {
-    width: calc(50% - 25px);
+    width: calc(50% - 25px) !important;
   }
 
   .instruction {
@@ -566,6 +590,9 @@
     width: calc(50% - 30px);
   }
 
+  .team-line {
+    padding: 60px 0 45px;
+  }
 
 }
 
@@ -585,7 +612,7 @@
 
   .services li,
   .preference__item {
-    width: calc(100% - 25px);
+    width: calc(100% - 25px) !important;
   }
 
   .services__img,
@@ -604,11 +631,19 @@
   .meet__item {
     width: calc(100% - 30px);
   }
-  .meet__img{
+
+  .meet__img {
     height: 200px;
   }
 
+  .team-line__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .team-line__left {
+    margin: 0 0 30px 0;
+  }
 
 
 

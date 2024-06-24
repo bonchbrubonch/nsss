@@ -6,10 +6,12 @@
 /*start header===================*/
 .header {
   background-color: #FEF1DE;
+
   &__mob,
-  &__menu-btn{
+  &__menu-btn {
     display: none;
   }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -96,6 +98,7 @@
     color: #0E0A01;
   }
 }
+
 .menu-item-has-children {
   display: flex;
   align-items: center;
@@ -114,6 +117,7 @@
     background-position: center;
   }
 }
+
 /*end header===================*/
 
 /*start intro===============*/
@@ -501,6 +505,7 @@
 }
 
 .video__inner {
+  display: block;
   position: relative;
   width: 100%;
   height: 470px;
@@ -529,16 +534,6 @@
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-.video__inner.play .video__img {
-  opacity: 0;
-  z-index: -1;
-  transform: scale(3);
-}
-
-.video__inner.play::after {
-  opacity: 0;
-  z-index: -1;
-}
 
 .video__img {
   position: absolute;
@@ -552,14 +547,6 @@
   z-index: 2;
 }
 
-.video__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /*end video=========*/
 
@@ -674,6 +661,10 @@
     font-weight: 400;
     line-height: 120%;
   }
+
+  &--left-bg {
+    background-position: right;
+  }
 }
 
 /*end u-intro==============*/
@@ -719,6 +710,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
     }
   }
 
@@ -738,6 +730,18 @@
     color: rgb(14, 10, 1);
     font-weight: 400;
     line-height: 140%;
+  }
+
+  &--team {
+    .preference__item {
+      width: calc(25% - 25px);
+      margin: 0 0 30px 25px;
+      text-align: center;
+    }
+
+    .container>p {
+      max-width: 735px;
+    }
   }
 }
 
@@ -920,9 +924,177 @@
 
 /*end meet===============*/
 
+/*start faq===============*/
+.faq {
+  padding: 70px 0 140px;
+}
 
+.accordion-item {
+  overflow: hidden;
+  border: 1px solid rgb(113, 113, 113);
+  border-radius: 30px;
+  padding: 40px 40px 25px 40px;
+  margin: 0 0 25px 0;
+}
 
+.accordion-content {
+  display: none;
 
+  p {
+    color: rgb(74, 74, 74);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.accordion-item.active {
+  border-radius: 40px;
+
+  .accordion-title {
+    span {
+      background-color: #0095D4;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 0 15px 0;
+  margin: 0 0 10px 0;
+  color: rgb(14, 10, 1);
+  font-family: 'Appetite';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    height: 1px;
+    background-color: #70C1E1;
+  }
+
+  span {
+    margin: 0 0 0 30px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: #FFCC40;
+    border-radius: 50%;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 1px;
+      background: #fff;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
+/*end faq===============*/
+
+/*start team==============*/
+.team {
+  margin: 140px 0 35px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__img+h6 {
+    position: relative;
+    z-index: 1;
+    margin: -27px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    height: 55px;
+    color: rgb(14, 10, 1);
+    font-family: 'Appetite';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background: rgb(255, 250, 243);
+    width: fit-content;
+  }
+}
+
+.team-line {
+  margin: 30px 0 0 0;
+  padding: 100px 0 85px;
+  background-color: #D7CDBB;
+
+  &__inner {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    margin: 0 30px 0 0;
+  }
+
+  h6 {
+    margin: 0 0 20px 0;
+    color: #0E0A01;
+    font-family: 'Appetite';
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+    color: #0E0A01;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+
+/*end team==============*/
 
 
 
