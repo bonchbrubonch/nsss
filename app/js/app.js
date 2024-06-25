@@ -1,4 +1,27 @@
-/*circle text*/ 
+$(function () {
+  $(".day").select2({
+     placeholder: "День",
+    minimumResultsForSearch: -1
+  });
+  $(".month").select2({
+     placeholder: "Місяць",
+    minimumResultsForSearch: -1
+  });
+  $(".year").select2({
+     placeholder: "Рік",
+    minimumResultsForSearch: -1
+  });
+  $(".u-class").select2({
+     placeholder: "1 клас",
+    minimumResultsForSearch: -1
+  });
+  $(".u-year").select2({
+     placeholder: "2024-2025",
+    minimumResultsForSearch: -1
+  });
+
+});
+/*circle text*/
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector('.emblem')) {
     var Emblem = {
@@ -50,11 +73,11 @@ document.querySelector(".header__menu-btn").addEventListener("click", function (
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelectorAll(".menu-item-has-children");
 
-  menuItems.forEach(function(menuItem) {
-    menuItem.addEventListener("click", function() {
+  menuItems.forEach(function (menuItem) {
+    menuItem.addEventListener("click", function () {
       const subMenu = menuItem.querySelector(".sub-menu");
       if (subMenu) {
         if (subMenu.style.display === "flex") {
@@ -67,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-/*accordion*/ 
+/*accordion*/
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".accordion-item");
 

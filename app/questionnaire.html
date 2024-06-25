@@ -15,9 +15,13 @@
     integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="css/app.min.css">
 </head>
@@ -179,143 +183,153 @@
         </div>
       </header>
 
-      <section class="u-intro" style="  background-image: url('images/dest/content/u-intro4.jpg');">
+      <section class="u-intro u-intro--left-bg" style="  background-image: url('images/dest/content/u-intro5.jpg');">
         <div class="container">
           <div class="u-intro__inner">
             <h1>
-              Наша команда
+              Online-реєстрація
             </h1>
           </div>
         </div>
       </section>
 
-    <section class="team">
-      <div class="container">
-        <div class="team__img">
-          <img src="images/dest/content/team-1.jpg" alt="team">
-        </div>
-        <h6>"Вчитель - супер професія</h6>
-      </div>
-    </section>
+      <form class="form">
+        <div class="container">
+          <div class="form__inner">
+            <h3 class="title">
+              Анкета онлайн-реєстрації для <br>
+              <span>вступу до NSS school</span>
+            </h3>
+            <div class="form__input-wrap">
+              <span>ПІБ дитини</span>
+              <input type="text" placeholder="ПІБ" required="">
+            </div>
+            <div class="form__select-wrapSm">
+              <div class="select-wrap">
+                <span>Дата народження дитини</span>
+                <div class="select">
+                  <select class="day" id="day" required name="day">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrap">
+                <span>Місяць народження дитини</span>
+                <div class="select">
+                  <select class="month" id="month" required name="month">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrap">
+                <span>Рік народження дитини</span>
+                <div class="select">
+                  <select class="year" id="year" required name="year">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__select-wrapMd">
+              <div class="select-wrap">
+                <span>Оберіть ваш майбутній клас</span>
+                <div class="select">
+                  <select class="u-class" id="u-class" required name="u-class">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrap">
+                <span>Вкажіть навчальний рік який Вас цікавить</span>
+                <div class="select">
+                  <select class="u-year" id="u-year" required name="u-year">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__input-wrap">
+              <span>Фактична адреса проживання на час навчання дитини</span>
+              <input type="text" required="">
+            </div>
 
-    <section class="preference preference--team">
-      <div class="container">
-        <h3 class="title">
-          Наша супер команда
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Elementum orci et nunc magna odio tristique imperdiet in. Pellentesque pretium porttitor volutpat euismod nascetur non in aliquet tortor.
-        </p>
-        <ul class="preference__list">
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-2.jpg" alt="img">
+            <div class="form__input-wrapSm">
+              <div class="form__input-wrap">
+                <span>ПІБ дитини</span>
+                <input type="text" placeholder="ПІБ" required="">
+              </div>
+              <div class="form__input-wrap">
+                <span>Контактний телефон</span>
+                <input type="text" placeholder="+38 (012) 345-67-89" required="">
+              </div>
+              <div class="form__input-wrap">
+                <span>Email</span>
+                <input type="text" required="">
+              </div>
             </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-3.jpg" alt="img">
+            <strong>
+              Як ви дізналися про наш заклад?
+            </strong>
+            <label class="basket-form__label">
+              <input class="basket-form__radio" type="radio" name="name1">
+              <div class="basket-form__check-fake"></div>
+              <span class="basket-form__check-text">Побачили рекламу в Інтернеті </span>
+            </label>
+            <label class="basket-form__label">
+              <input class="basket-form__radio" type="radio" name="name1">
+              <div class="basket-form__check-fake"></div>
+              <span class="basket-form__check-text">Зовнішня реклама </span>
+            </label>
+            <label class="basket-form__label">
+              <input class="basket-form__radio" type="radio" name="name1">
+              <div class="basket-form__check-fake"></div>
+              <span class="basket-form__check-text">З реклами в соціальних мережах Фейсбук чи Інстаграм </span>
+            </label>
+            <label class="basket-form__label">
+              <input class="basket-form__radio" type="radio" name="name1">
+              <div class="basket-form__check-fake"></div>
+              <span class="basket-form__check-text">Рекомендації знайомих, чиї діти вже вступили до NSS school </span>
+            </label>
+            <label class="basket-form__label">
+              <input class="basket-form__radio" type="radio" name="name1">
+              <div class="basket-form__check-fake"></div>
+              <span class="basket-form__check-text">Від співробітників NSS school </span>
+            </label>
+            <label class="basket-form__label">
+              <input class="basket-form__radio" type="radio" name="name1">
+              <div class="basket-form__check-fake"></div>
+              <span class="basket-form__check-text">Інше</span>
+            </label>
+            <div class="form__input-wrap u-text">
+              <input type="text" required="">
             </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-4.jpg" alt="img">
-            </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-5.jpg" alt="img">
-            </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-2.jpg" alt="img">
-            </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-3.jpg" alt="img">
-            </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-4.jpg" alt="img">
-            </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-          <li class="preference__item">
-            <div class="preference__img">
-              <img src="images/dest/content/team-5.jpg" alt="img">
-            </div>
-            <h6>
-              Кулакевич Олена
-            </h6>
-            <p>
-              Виконуючий обов‘язки директора
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="team-line">
-      <div class="container">
-        <div class="team-line__inner">
-          <div class="team-line__left">
-            <h6>
-              Бажаєш стати членом щасливої та веселої команди NSS?
-            </h6>
-            <p>
-              Запрошуємо в команду вчителів, тренерів, керівників дитячих студій та секцій.
-            </p>
-          </div>
-          <div class="team-line__rigth">
-            <a href="#" class="btn btn--white">Приєднатися</a>
+            <p>Відправляючи заповнену форму, Ви погоджуєтеся з <a href="#">Політикою NSS щодо обробки персональних даних</a></p>
+            <button type="submit" class="btn btn--blue-bg">
+              Надіслати
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </form>
 
     </div>
     <footer class="footer">
@@ -431,15 +445,21 @@
   </div>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
     integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="js/app.min.js"></script>
 </body>

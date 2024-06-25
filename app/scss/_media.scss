@@ -454,6 +454,20 @@
     font-size: 20px;
   }
 
+  .form .title {
+    margin: 0 0 30px 0;
+  }
+
+  .form__inner {
+    padding: 20px;
+  }
+
+  .form-contacts {
+    padding: 15px;
+  }
+
+
+
 
 
 
@@ -593,6 +607,43 @@
   .team-line {
     padding: 60px 0 45px;
   }
+
+  .form__input-wrapSm {
+    flex-wrap: wrap;
+  }
+
+  .form__select-wrapSm .select-wrap,
+  .form__select-wrapMd .select-wrap,
+  .form__input-wrapSm .form__input-wrap {
+    width: calc(100% - 25px);
+  }
+
+  .form strong {
+    margin: 20px 0 20px;
+  }
+
+  .u-contacts--page .u-contacts__inner {
+    flex-direction: column;
+  }
+
+  .u-contacts--page .u-contacts__right {
+    margin: 0 0 45px 0;
+    max-width: 100%;
+  }
+
+  .form-contacts {
+    max-width: 100%;
+    border-radius: 30px;
+  }
+
+  .u-map {
+    padding: 70px 0;
+  }
+
+  .u-map__inner {
+    height: 350px;
+  }
+
 
 }
 
