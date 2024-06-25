@@ -104,7 +104,75 @@ body.lock {
   font-weight: 400;
   line-height: 120%;
   letter-spacing: 1.5px;
-  span{
+
+  span {
     color: #0095D4;
   }
 }
+
+/*start pagination===========*/
+.pagination {
+  margin: 40px 0 0 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  li:first-child,
+  li:last-child {
+    a {
+      position: relative;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+
+      img {
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  li+li {
+    margin-left: 10px;
+  }
+
+  li:first-child {
+    transform: rotate(180deg);
+  }
+
+
+  a,
+  span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: rgb(26, 26, 26);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: center;
+    border-radius: 8px;
+    &.active {
+      border: 1px solid rgb(255, 204, 64);
+      background: rgb(255, 245, 225);
+    }
+  }
+
+  a:hover {
+    border: 1px solid rgb(255, 204, 64);
+    border-color: rgb(243, 161, 61);
+    color: rgb(243, 161, 61);
+  }
+
+}
+
+/*end pagination===========*/
