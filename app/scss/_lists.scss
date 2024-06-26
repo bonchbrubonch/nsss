@@ -37,4 +37,13 @@
     }
 
   }
+  &--orange {
+    li {
+      &::after {
+        background-color: #FFCC40;
+      }
+    }
+
+  }
+  
 }

@@ -407,7 +407,7 @@
   }
 
   .u-intro h1 {
-    font-size: 38px;
+    font-size: 30px;
   }
 
   .instruction strong,
@@ -491,6 +491,98 @@
   .work-line {
     margin: 70px 0 70px;
   }
+
+  .d-info__inner {
+    padding: 70px 0;
+  }
+
+  .d-info h2 {
+    font-size: 28px;
+  }
+
+  .timetable__list li p {
+    font-size: 14px;
+  }
+
+  .timetable__list li span {
+    font-size: 16px;
+    height: 30px;
+  }
+
+  .timetable__list li {
+    padding: 15px;
+    width: calc(25% - 25px);
+  }
+
+  .u-program__list h5 {
+    font-size: 18px;
+  }
+
+  .u-program__list li {
+    width: calc(33.33333% - 25px);
+  }
+
+  .u-talent__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .u-talent__left {
+    margin: 0 0 30px 0;
+    max-width: 100%;
+  }
+
+  .u-talent__right {
+    max-width: 100%;
+  }
+
+  .u-plus__list>li {
+    width: calc(50% - 25px);
+  }
+
+  .d-info {
+    margin: 20px 0;
+  }
+
+  .timetable {
+    padding: 60px 0 60px;
+  }
+
+  .u-program {
+    padding: 60px 0 50px;
+  }
+
+  .u-talent {
+    padding: 20px 0 60px;
+  }
+
+  .u-plus {
+    padding: 70px 0 20px;
+  }
+
+  .u-program--flex-start h5 {
+    font-size: 14px;
+  }
+
+  .d-program__list li {
+    width: calc(20% - 25px);
+  }
+
+  .pool__list li {
+    height: 295px;
+  }
+
+  .d-program {
+    padding: 30px 0 30px;
+  }
+
+  .pool {
+    padding: 50px 0 30px;
+  }
+
+
+
+
 }
 
 @media (max-width: 768px) {
@@ -553,7 +645,8 @@
     margin: 0 0 0 auto;
   }
 
-  body {
+  body,
+  .list li {
     font-size: 12px;
   }
 
@@ -685,6 +778,28 @@
     width: calc(100% - 25px);
   }
 
+  .u-program__list li {
+    width: calc(50% - 25px);
+  }
+
+  .u-program__img,
+  .u-program__img {
+    height: 165px;
+    border-radius: 30px;
+  }
+
+  .d-program__list li {
+    width: calc(33.33333% - 25px);
+  }
+
+  .pool__list li {
+    height: 205px;
+    width: calc(50% - 25px);
+    border-radius: 30px;
+  }
+
+
+
 }
 
 
@@ -736,7 +851,22 @@
     margin: 0 0 30px 0;
   }
 
+  .timetable__list li {
+    padding: 15px;
+    width: calc(50% - 25px);
+    min-height: 100px;
+    border-radius: 20px;
+  }
 
+  .u-talent__list li {
+    width: calc(50% - 25px);
+  }
 
+  .u-plus__list>li {
+    width: calc(100% - 25px);
+  }
 
+  .d-program__list li {
+    width: calc(50% - 25px);
+  }
 }

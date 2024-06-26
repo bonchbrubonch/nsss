@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a href="#" class="header__logo">
+              <img src="images/dest/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="header__nav">
+              <ul>
+                <li>
+                  <a href="#">
+                    Головна
+                  </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <span href="#">
+                    Про нас
+                  </span>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">
+                        Про NSS
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Підходи до навчання
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Наша команда
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Робота в NSS
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    Садочок
+                  </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <span href="#">
+                    Школа
+                  </span>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">
+                        Школа
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Позашкільний комплекс
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Публікації
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <span href="#">
+                    Вступ
+                  </span>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">
+                        Садочок
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Школа
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Часті запитання
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    Контакти
+                  </a>
+                </li>
+                <li class="header__mob">
+                  <a href="#" class="btn btn--blue">
+                    Замовити дзвінок
+                  </a>
+                </li>
+                <li class="header__mob">
+                  <ul class="social">
+                    <li>
+                      <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.99995 5.06561C6.38075 5.06561 5.06555 6.38081 5.06555 8.00001C5.06555 9.61921 6.38075 10.9376 7.99995 10.9376C9.61915 10.9376 10.9376 9.61921 10.9376 8.00001C10.9376 6.38081 9.61915 5.06561 7.99995 5.06561Z"
+                            fill="#4A4A4A" />
+                          <path
+                            d="M12.4288 0H3.5712C1.6032 0 0 1.6032 0 3.5712V12.4288C0 14.4 1.6032 16 3.5712 16H12.4288C14.4 16 16 14.4 16 12.4288V3.5712C16 1.6032 14.4 0 12.4288 0ZM8 13.184C5.1424 13.184 2.816 10.8576 2.816 8C2.816 5.1424 5.1424 2.8192 8 2.8192C10.8576 2.8192 13.184 5.1424 13.184 8C13.184 10.8576 10.8576 13.184 8 13.184ZM13.2928 3.76C12.688 3.76 12.1952 3.2704 12.1952 2.6656C12.1952 2.0608 12.688 1.568 13.2928 1.568C13.8976 1.568 14.3904 2.0608 14.3904 2.6656C14.3904 3.2704 13.8976 3.76 13.2928 3.76Z"
+                            fill="#4A4A4A" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M14.0496 4.00615C13.1351 4.00615 12.2913 3.70318 11.6137 3.19208C10.8365 2.60618 10.2782 1.74673 10.081 0.756136C10.0315 0.507061 10.0055 0.253897 10.0034 -3.05176e-05H7.39088V7.13848L7.38775 11.0486C7.38775 12.0939 6.70702 12.9803 5.76337 13.292C5.48072 13.3855 5.18302 13.425 4.88577 13.4085C4.49266 13.3869 4.12428 13.2683 3.8041 13.0767C3.12274 12.6692 2.66077 11.9299 2.64825 11.0843C2.62854 9.76253 3.69706 8.68493 5.01785 8.68493C5.27856 8.68493 5.52895 8.7275 5.76337 8.8048V6.15228C5.51612 6.11566 5.26448 6.09656 5.01002 6.09656C3.56436 6.09656 2.21227 6.69749 1.24578 7.7801C0.515276 8.59824 0.0771 9.64203 0.00949571 10.7365C-0.0790785 12.1744 0.447046 13.5412 1.46737 14.5496C1.61729 14.6976 1.77472 14.835 1.93935 14.9618C2.81414 15.635 3.8836 16 5.01002 16C5.26448 16 5.51612 15.9812 5.76337 15.9446C6.81562 15.7887 7.7865 15.307 8.55268 14.5496C9.49413 13.6191 10.0143 12.3838 10.0199 11.0689L10.0065 5.22991C10.4567 5.57716 10.9498 5.86477 11.4737 6.08561C12.2934 6.43146 13.1626 6.60673 14.0571 6.60641V4.00553C14.0577 4.00615 14.0502 4.00615 14.0496 4.00615Z"
+                            fill="#4A4A4A" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M6.23908 16V8.70218H8.68767L9.05503 5.85725H6.23908V4.04118C6.23908 3.21776 6.4668 2.65661 7.64891 2.65661L9.15414 2.65599V0.111384C8.89383 0.0775563 8.00029 0 6.96029 0C4.78861 0 3.30184 1.32557 3.30184 3.75942V5.85725H0.845825V8.70218H3.30184V16H6.23908Z"
+                            fill="#4A4A4A" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__tel">
+              <a href="tel:0443346353">044 334 63 53</a>
+              <a href="tel:0443346353">044 334 63 53</a>
+            </div>
+            <a href="#" class="btn btn--blue">
+              Замовити дзвінок
+            </a>
+            <div class="header__lang">
+              <a class="header__lang-active" href="#">Ua</a> |
+              <a href="#">En</a>
+            </div>
+            <button class="header__menu-btn">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="u-intro" style="  background-image: url('images/dest/content/u-intro8.jpg');">
+        <div class="container">
+          <div class="u-intro__inner">
+            <h1>
+              Садочок
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-item u-item--green">
+        <div class="container">
+          <div class="u-item__inner">
+            <div class="u-item__left">
+              <img src="images/dest/content/u-item4.png" alt="child">
+            </div>
+            <div class="u-item__right">
+              <h5>
+                Вчимося, граючись!
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. In imperdiet faucibus est sed a at viverra lectus. Pellentesque
+                praesent duis duis lectus donec pellentesque erat at consectetur.
+              </p>
+              <a href="#" class="btn btn--white">Запис на екскурсію</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="d-info">
+        <div class="container">
+          <div class="d-info__inner">
+            <h2>
+              Двомовний дитячий садок нового формату «NSS» у Києві запрошує
+              малят 3-6 років.
+            </h2>
+            <p>
+              Ми допомагаємо дітям в ігровій формі розвиватися, навчатися, засвоювати мови, формувати соціальні та
+              комунікативні навички, розкривати свої таланти, творчі та спортивні здібності – щоби вони росли щасливими,
+              здоровими і зацікавленими.
+            </p>
+            <p>
+              Ми хочемо вийти за прийняті шкільні освітні рамки володіння англійською мовою. Для цього створюємо 50%
+              англомовного та 50% україномовного середовища. Протягом дня дітей супроводжують україномовні та англомовні
+              куратори. Правило «один куратор – одна мова» допоможе дітям краще спілкуватися рідною й іноземною.
+            </p>
+            <p>
+              Приватний садочок створює ідеальні умови для занурення в двомовне середовище: заняття проходять у грі й
+              спілкуванні.
+            </p>
+            <p>
+              Крім спілкування англійською з англомовним куратором і різноманітних регулярних занять англійською, у всіх
+              вікових групах проходять також заняття з англійської з носіями мови. Це допомагає звикнути до особливостей
+              вимови, натренувати слух і говорити вільно і без акценту.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-join work-join--one">
+        <div class="container">
+          <h3 class="title">
+            Переваги садочку NSS
+          </h3>
+          <div class="preference__inner">
+            <div class="preference__left">
+              <h3>Для учнів </h3>
+              <ul class="list list--green">
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="preference__right">
+              <h3>Для батьків</h3>
+              <ul class="list list--orange">
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Здорові діти
+                  </strong>
+                  <p>
+                    Маємо власний басейн з тренером і багато спортивних секцій
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timetable">
+        <div class="container">
+          <h3 class="title">
+            День, повний відкриттів та знань
+          </h3>
+          <p>
+            Розпорядок дня складено з урахуванням добових ритмів дитини і з дотриманням балансу зміни видів діяльності –
+            для здорового і гармонійного розвитку.
+          </p>
+          <ul class="timetable__list">
+            <li>
+              <span>
+                08:30
+              </span>
+              <p>
+                Gymnastics
+              </p>
+            </li>
+            <li class="rest">
+              <span>
+                08:50
+              </span>
+              <p>
+                Breakfast
+              </p>
+            </li>
+            <li>
+              <span>
+                09:00
+              </span>
+              <p>
+                Circle time
+              </p>
+            </li>
+            <li>
+              <span>
+                09:15
+              </span>
+              <p>
+                Сlasses
+              </p>
+            </li>
+            <li class="rest">
+              <span>
+                10:15
+              </span>
+              <p>
+                Snack
+              </p>
+            </li>
+            <li>
+              <span>
+                10:30
+              </span>
+              <p>
+                Сlasses
+              </p>
+            </li>
+            <li>
+              <span>
+                11:30
+              </span>
+              <p>
+                Playing outside
+              </p>
+            </li>
+            <li class="rest">
+              <span>
+                12:30
+              </span>
+              <p>
+                Lunch
+              </p>
+            </li>
+            <li>
+              <span>
+                12:50
+              </span>
+              <p>
+                Reading books
+              </p>
+            </li>
+            <li>
+              <span>
+                13:10
+              </span>
+              <p>
+                Relaxing
+              </p>
+            </li>
+            <li>
+              <span>
+                13:30
+              </span>
+              <p>
+                Nap time
+              </p>
+            </li>
+            <li class="rest">
+              <span>
+                15:00
+              </span>
+              <p>
+                Wake up+ Snack
+              </p>
+            </li>
+            <li>
+              <span>
+                15:20
+              </span>
+              <p>
+                Сlasses
+              </p>
+            </li>
+            <li>
+              <span>
+                17:00
+              </span>
+              <p>
+                Playing outside
+              </p>
+            </li>
+            <li class="rest">
+              <span>
+                17:40
+              </span>
+              <p>
+                Dinner
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="u-program">
+        <div class="container">
+          <h3 class="title">
+            Навчальна програма націлена на формування та розвиток
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Proin scelerisque volutpat aliquam placerat rhoncus euismod turpis
+            pellentesque in. Tellus vulputate ut amet magna sapien eu velit. Purus proin amet et faucibus auctor turpis.
+            Pellentesque rutrum sit lectus vestibulum.
+          </p>
+          <ul class="u-program__list">
+            <li>
+              <div class="u-program__img">
+                <img src="images/dest/content/u-program-1.jpg" alt="img">
+              </div>
+              <h5>
+                Мислення
+              </h5>
+            </li>
+            <li>
+              <div class="u-program__img">
+                <img src="images/dest/content/u-program-2.jpg" alt="img">
+              </div>
+              <h5>
+                Спортивні вміння
+              </h5>
+            </li>
+            <li>
+              <div class="u-program__img">
+                <img src="images/dest/content/u-program-3.jpg" alt="img">
+              </div>
+              <h5>
+                Комунікація
+              </h5>
+            </li>
+            <li>
+              <div class="u-program__img">
+                <img src="images/dest/content/u-program-4.jpg" alt="img">
+              </div>
+              <h5>
+                Творчі здібності
+              </h5>
+            </li>
+            <li>
+              <div class="u-program__img">
+                <img src="images/dest/content/u-program-5.jpg" alt="img">
+              </div>
+              <h5>
+                Дослідницькі навички
+              </h5>
+            </li>
+            <li>
+              <div class="u-program__img">
+                <img src="images/dest/content/u-program-6.jpg" alt="img">
+              </div>
+              <h5>
+                Широкий кругозір
+              </h5>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="u-talent">
+        <div class="container">
+          <div class="u-talent__inner">
+            <div class="u-talent__left">
+              <h3 class="title">
+                Розкриття талантів дитини
+              </h3>
+              <p>
+                Ми щиро переконані, що всі діти талановиті, а наше завдання – створити умови, в яких кожна дитина зможе
+                розкрити всі свої таланти.
+              </p>
+              <p>
+                Ми наповнюємо кожен день різноплановими творчими активностями, які допоможуть дітям розвивати свій
+                потенціал. Це заняття:
+              </p>
+              <a href="#" class="btn btn--transparent">
+                Записатись на екскурсію
+              </a>
+            </div>
+            <div class="u-talent__right">
+              <div class="u-talent__list">
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+                <li>
+                  <div class="u-talent__img">
+                    <img src="images/dest/content/u-talent-1.png" alt="img">
+                  </div>
+                  <span>
+                    Творчі студії
+                  </span>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-plus">
+        <div class="container">
+          <h3 class="title">
+            Здорові та щасливі діти
+          </h3>
+          <p>
+            Ми створили максимально комфортні і безпечні умови, в яких діти можуть з інтересом пізнавати світ,
+            розвиватися і формувати нові навички.
+          </p>
+          <ul class="u-plus__list">
+            <li>
+              <div class="u-plus__img">
+                <img src="images/dest/content/u-plus-1.jpg" alt="img">
+              </div>
+              <h6>
+                Харчування
+              </h6>
+              <ul class="list list--green">
+                <li>
+                  сучасна кухня, спроєктована і побудована з нуля;
+                </li>
+                <li>
+                  професійний персонал;
+                </li>
+                <li>
+                  екологічно чисті продукти;
+                </li>
+                <li>
+                  збалансований раціон, що включає велику кількість овочів і фруктів;
+                </li>
+                <li>
+                  можливість вибору дієтичного меню;
+                </li>
+                <li>
+                  знайомство з різними кухнями світу.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="u-plus__img">
+                <img src="images/dest/content/u-plus-2.jpg" alt="img">
+              </div>
+              <h6>
+                Безпека
+              </h6>
+              <p>
+                Професійна компанія забезпечує безпеку нашого кампусу:
+              </p>
+              <ul class="list list--orange">
+                <li>
+                  закритий двір;
+                </li>
+                <li>
+                  камери спостереження всередині і зовні кампусу;
+                </li>
+                <li>
+                  пропускну систему;
+                </li>
+                <li>
+                  команду охорони, що постійно знаходиться в кампусі.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="u-plus__img">
+                <img src="images/dest/content/u-plus-3.jpg" alt="img">
+              </div>
+              <h6>
+                Медичне обслуговування
+              </h6>
+              <p>
+                Постійно працює медична служба:
+              </p>
+              <ul class="list list--orange">
+                <li>
+                  кваліфіковані медичні сестри;
+                </li>
+                <li>
+                  кваліфікований педіатр
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="u-plus__img">
+                <img src="images/dest/content/u-plus-4.jpg" alt="img">
+              </div>
+              <h6>
+                Фізична активність
+              </h6>
+              <ul class="list list--green">
+                <li>
+                  цікавий, безпечний і розвиваючий простір усередині і зовні;
+                </li>
+                <li>
+                  прогулянки за будь-якої погоди;
+                </li>
+                <li>
+                  часта зміна діяльності.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="meet">
+        <div class="container">
+          <h3 class="title">
+            Форма знайомства
+          </h3>
+          <p>
+            Виберіть зручний для Вас формат знайомства з Міжнародною школою NSS
+          </p>
+          <div class="meet__list-wrap">
+            <ul class="meet__list">
+              <li class="meet__item">
+                <div class="meet__img">
+                  <img src="images/dest/content/meet-1.png" alt="img">
+                </div>
+                <span>
+                  Оnline консультація
+                </span>
+                <p>
+                  Залишите ваш email – і ми надішлемо вам всю важливу
+                  інформацію про умови вступу та вартість.
+                </p>
+                <a href="#" class="btn btn--yellow">
+                  Замовити
+                </a>
+              </li>
+              <li class="meet__item">
+                <div class="meet__img">
+                  <img src="images/dest/content/meet-2.png" alt="img">
+                </div>
+                <span>
+                  Замовити дзвінок
+                </span>
+                <p>
+                  Залишите ваш email – і ми надішлемо вам всю важливу
+                  інформацію про умови вступу та вартість.
+                </p>
+                <a href="#" class="btn btn--yellow">
+                  Замовити
+                </a>
+              </li>
+              <li class="meet__item">
+                <div class="meet__img">
+                  <img src="images/dest/content/meet-1.png" alt="img">
+                </div>
+                <span>
+                  Індивідуальна зустріч
+                </span>
+                <p>
+                  Залишите ваш email – і ми надішлемо вам всю важливу
+                  інформацію про умови вступу та вартість.
+                </p>
+                <a href="#" class="btn btn--yellow">
+                  Замовити
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__coll">
+            <a href="#" class="footer__logo">
+              <img src="images/dest/icons/logo.svg" alt="logo">
+            </a>
+            <p>Lorem ipsum dolor sit amet consectetur. Est est ornare eget erat.</p>
+            <div class="social">
+              <li>
+                <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.99995 5.06561C6.38075 5.06561 5.06555 6.38081 5.06555 8.00001C5.06555 9.61921 6.38075 10.9376 7.99995 10.9376C9.61915 10.9376 10.9376 9.61921 10.9376 8.00001C10.9376 6.38081 9.61915 5.06561 7.99995 5.06561Z"
+                      fill="#4A4A4A" />
+                    <path
+                      d="M12.4288 0H3.5712C1.6032 0 0 1.6032 0 3.5712V12.4288C0 14.4 1.6032 16 3.5712 16H12.4288C14.4 16 16 14.4 16 12.4288V3.5712C16 1.6032 14.4 0 12.4288 0ZM8 13.184C5.1424 13.184 2.816 10.8576 2.816 8C2.816 5.1424 5.1424 2.8192 8 2.8192C10.8576 2.8192 13.184 5.1424 13.184 8C13.184 10.8576 10.8576 13.184 8 13.184ZM13.2928 3.76C12.688 3.76 12.1952 3.2704 12.1952 2.6656C12.1952 2.0608 12.688 1.568 13.2928 1.568C13.8976 1.568 14.3904 2.0608 14.3904 2.6656C14.3904 3.2704 13.8976 3.76 13.2928 3.76Z"
+                      fill="#4A4A4A" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.0496 4.00615C13.1351 4.00615 12.2913 3.70318 11.6137 3.19208C10.8365 2.60618 10.2782 1.74673 10.081 0.756136C10.0315 0.507061 10.0055 0.253897 10.0034 -3.05176e-05H7.39088V7.13848L7.38775 11.0486C7.38775 12.0939 6.70702 12.9803 5.76337 13.292C5.48072 13.3855 5.18302 13.425 4.88577 13.4085C4.49266 13.3869 4.12428 13.2683 3.8041 13.0767C3.12274 12.6692 2.66077 11.9299 2.64825 11.0843C2.62854 9.76253 3.69706 8.68493 5.01785 8.68493C5.27856 8.68493 5.52895 8.7275 5.76337 8.8048V6.15228C5.51612 6.11566 5.26448 6.09656 5.01002 6.09656C3.56436 6.09656 2.21227 6.69749 1.24578 7.7801C0.515276 8.59824 0.0771 9.64203 0.00949571 10.7365C-0.0790785 12.1744 0.447046 13.5412 1.46737 14.5496C1.61729 14.6976 1.77472 14.835 1.93935 14.9618C2.81414 15.635 3.8836 16 5.01002 16C5.26448 16 5.51612 15.9812 5.76337 15.9446C6.81562 15.7887 7.7865 15.307 8.55268 14.5496C9.49413 13.6191 10.0143 12.3838 10.0199 11.0689L10.0065 5.22991C10.4567 5.57716 10.9498 5.86477 11.4737 6.08561C12.2934 6.43146 13.1626 6.60673 14.0571 6.60641V4.00553C14.0577 4.00615 14.0502 4.00615 14.0496 4.00615Z"
+                      fill="#4A4A4A" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.23908 16V8.70218H8.68767L9.05503 5.85725H6.23908V4.04118C6.23908 3.21776 6.4668 2.65661 7.64891 2.65661L9.15414 2.65599V0.111384C8.89383 0.0775563 8.00029 0 6.96029 0C4.78861 0 3.30184 1.32557 3.30184 3.75942V5.85725H0.845825V8.70218H3.30184V16H6.23908Z"
+                      fill="#4A4A4A" />
+                  </svg>
+                </a>
+              </li>
+            </div>
+          </div>
+          <div class="footer__coll">
+            <ul>
+              <li>
+                <a href="#">Садочок</a>
+              </li>
+              <li>
+                <a href="#">Школа</a>
+              </li>
+              <li>
+                <a href="#">Позашкільний комплекс</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__coll">
+            <span class="footer__title">Про нас</span>
+            <ul>
+              <li>
+                <a href="#">Про NSS</a>
+              </li>
+              <li>
+                <a href="#">Підходи до навчання</a>
+              </li>
+              <li>
+                <a href="#">Команда</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__coll">
+            <span class="footer__title">Вступ</span>
+            <ul>
+              <li>
+                <a href="#">Садочок</a>
+              </li>
+              <li>
+                <a href="#">Школа</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__coll">
+            <span class="footer__title">Контакти</span>
+            <ul>
+              <li>
+                <a href="tel:0443346353">
+                  <img src="images/dest/icons/tel-3.svg" alt="icon">
+                  (044)334 - 63 - 53
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@nsschool.com.ua" target="_blank">
+                  <img src="images/dest/icons/meil-2.svg" alt="icon">
+                  info@nsschool.com.ua
+                </a>
+              </li>
+              <li>
+                <img src="images/dest/icons/mark-2.svg" alt="icon">
+                м. Київ, вул. Миру, 5, Петропавлівська Борщагівка
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p>
+            © 2024 Всі права захищені. Розроблено SFdevelop
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+    integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
