@@ -506,7 +506,6 @@
 
   .timetable__list li span {
     font-size: 16px;
-    height: 30px;
   }
 
   .timetable__list li {
@@ -580,7 +579,28 @@
     padding: 50px 0 30px;
   }
 
+  .tringle__left {
+    transform: translateX(0);
+    max-width: 100%;
+    margin: 0 0 40px 0;
+  }
 
+  .tringle__inner {
+    flex-direction: column;
+  }
+
+  .tringle {
+    padding: 70px 0 100px;
+  }
+
+  .tringle__right {
+    margin: 0 auto;
+    zoom: .6;
+  }
+
+  .u-plus--school .u-plus__list h6 {
+    font-size: 18px;
+  }
 
 
 }
@@ -798,6 +818,17 @@
     border-radius: 30px;
   }
 
+  .timetable__list li {
+    width: calc(33.33333% - 25px);
+  }
+
+  .u-plus--school .u-plus__list>li {
+    width: calc(50% - 25px);
+  }
+
+  .u-plus--school .u-plus__img {
+    height: 200px;
+  }
 
 
 }
@@ -868,5 +899,13 @@
 
   .d-program__list li {
     width: calc(50% - 25px);
+  }
+
+  .tringle__right {
+    zoom: .4;
+  }
+
+  .u-plus--school .u-plus__list>li {
+    width: calc(100% - 25px);
   }
 }

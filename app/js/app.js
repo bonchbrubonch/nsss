@@ -1,22 +1,22 @@
 $(function () {
   $(".day").select2({
-     placeholder: "День",
+    placeholder: "День",
     minimumResultsForSearch: -1
   });
   $(".month").select2({
-     placeholder: "Місяць",
+    placeholder: "Місяць",
     minimumResultsForSearch: -1
   });
   $(".year").select2({
-     placeholder: "Рік",
+    placeholder: "Рік",
     minimumResultsForSearch: -1
   });
   $(".u-class").select2({
-     placeholder: "1 клас",
+    placeholder: "1 клас",
     minimumResultsForSearch: -1
   });
   $(".u-year").select2({
-     placeholder: "2024-2025",
+    placeholder: "2024-2025",
     minimumResultsForSearch: -1
   });
 
@@ -113,3 +113,25 @@ function closeAllAccordions() {
     item.classList.remove("active");
   });
 }
+
+/*start animation========*/
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }else{
+      change.target.classList.remove('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+/*end animation========*/
