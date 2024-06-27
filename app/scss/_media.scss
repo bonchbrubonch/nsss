@@ -613,6 +613,15 @@
   .articl__inner>div img {
     border-radius: 20px;
   }
+
+  .about__items h5 {
+    font-size: 18px;
+  }
+
+  .about .title {
+    margin: 40px 0 20px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -839,9 +848,28 @@
   .u-plus--school .u-plus__img {
     height: 200px;
   }
-  .articl__inner>div img{
+
+  .articl__inner>div img {
     height: 170px;
   }
+
+  .modal__left {
+    display: none;
+  }
+
+  .modal__right {
+    padding: 100px 20px 100px 20px;
+  }
+
+  .about__img {
+    border-radius: 20px;
+  }
+
+  .about__img {
+    margin: 0 0 10px 0;
+    height: 185px;
+  }
+
 
 }
 
@@ -923,5 +951,10 @@
 
   .articl__inner>div img {
     width: calc(50% - 25px);
+  }
+
+  .about__items li {
+    width: calc(100% - 55px);
+    margin: 0 0 25px 55px;
   }
 }
