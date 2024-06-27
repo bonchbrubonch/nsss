@@ -2103,6 +2103,7 @@
 /*start tringle============*/
 .tringle {
   padding: 70px 0 185px;
+
   &__inner {
     display: flex;
   }
@@ -2135,6 +2136,7 @@
     left: 50%;
     transform: translate(-50%, -40px);
     transition: linear .7s;
+    opacity: 0;
   }
 
   &__right-two {
@@ -2143,6 +2145,7 @@
     left: 0;
     transform: translateX(-40px);
     transition: linear .7s;
+    opacity: 0;
   }
 
   &__right-three {
@@ -2160,29 +2163,98 @@
     right: 0;
     transform: translateX(40px);
     transition: linear .7s;
+    opacity: 0;
   }
 
   &__right.element-show {
     .tringle__right-one {
       transform: translate(-50%, 0);
+      opacity: 1;
     }
 
     .tringle__right-two {
       transform: translateX(0);
+      opacity: 1;
     }
 
     .tringle__right-three {
       transform: translate(-50%, 0) scale(.95);
+      opacity: 1;
     }
 
     .tringle__right-four {
       transform: translateX(0);
+      opacity: 1;
     }
   }
 }
 
 /*end tringle============*/
 
+/*start articl============*/
+.articl {
+  padding: 140px 0 0 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  .container>img {
+    border-radius: 40px;
+    margin: 0 0 30px 0;
+  }
+
+  &__inner {
+    max-width: 1030px;
+    width: 100%;
+    margin: 0 auto;
+    &>div{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 0 0 0 -25px;
+      img{
+        height: 240px;
+        width: calc(33.33333% - 25px);
+        margin: 0 0 25px 25px;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  span {
+    margin: 0 0 15px 0;
+    display: flex;
+    color: rgb(14, 10, 1);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  h3 {
+    margin: 0 0 15px 0;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    line-height: 140%;
+  }
+  h5{
+    margin: 0 0 15px 0;
+    font-family: 'Appetite';
+    line-height: 140%;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+/*end articl============*/
 
 
 

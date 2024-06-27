@@ -602,7 +602,17 @@
     font-size: 18px;
   }
 
+  .articl {
+    padding: 70px 0 0 0;
+  }
 
+  .articl .container>img {
+    border-radius: 30px;
+  }
+
+  .articl__inner>div img {
+    border-radius: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -829,7 +839,9 @@
   .u-plus--school .u-plus__img {
     height: 200px;
   }
-
+  .articl__inner>div img{
+    height: 170px;
+  }
 
 }
 
@@ -907,5 +919,9 @@
 
   .u-plus--school .u-plus__list>li {
     width: calc(100% - 25px);
+  }
+
+  .articl__inner>div img {
+    width: calc(50% - 25px);
   }
 }
