@@ -23,47 +23,63 @@ $(function () {
 });
 /*circle text*/
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector('.emblem')) {
-    var Emblem = {
-      init: function (el, str) {
-        var element = document.querySelector(el);
-        var text = str ? str : element.innerHTML;
+  const emblems = document.querySelectorAll('.emblem');
+
+  if (emblems.length > 0) {
+    const Emblem = {
+      init: function (element, str) {
+        const text = str ? str : element.innerHTML;
         element.innerHTML = '';
-        for (var i = 0; i < text.length; i++) {
-          var letter = text[i];
-          var span = document.createElement('span');
-          var node = document.createTextNode(letter);
-          var r = (360 / text.length) * i;
-          var x = (Math.PI / text.length).toFixed(0) * i;
-          var y = (Math.PI / text.length).toFixed(0) * i;
+        for (let i = 0; i < text.length; i++) {
+          const letter = text[i];
+          const span = document.createElement('span');
+          const node = document.createTextNode(letter);
+          const r = (360 / text.length) * i;
+          const x = (Math.PI / text.length).toFixed(0) * i;
+          const y = (Math.PI / text.length).toFixed(0) * i;
           span.appendChild(node);
-          span.style.webkitTransform = 'rotateZ(' + r + 'deg) translate3d(' + x + 'px,' + y + 'px,0)';
-          span.style.transform = 'rotateZ(' + r + 'deg) translate3d(' + x + 'px,' + y + 'px,0)';
+          span.style.webkitTransform = `rotateZ(${r}deg) translate3d(${x}px,${y}px,0)`;
+          span.style.transform = `rotateZ(${r}deg) translate3d(${x}px,${y}px,0)`;
           element.appendChild(span);
         }
       }
     };
 
-    Emblem.init('.emblem');
+    emblems.forEach(emblem => {
+      Emblem.init(emblem);
+    });
   }
 });
+
 
 var swiper = new Swiper(".intro__slider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
   breakpoints: {
     992: {
       spaceBetween: 50,
       slidesPerView: 1.5,
+      freeMode: true,
+      watchSlidesProgress: true,
     },
   },
 });
-
+var swiper2 = new Swiper(".product__slider", {
+  loop: true,
+  effect: "fade",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});
 
 /*header*/
 document.querySelector(".header__menu-btn").addEventListener("click", function () {
@@ -114,24 +130,3 @@ function closeAllAccordions() {
   });
 }
 
-/*start animation========*/
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('element-show');
-    }else{
-      change.target.classList.remove('element-show');
-    }
-  });
-}
-
-let options = {
-  threshold: [0.5]
-};
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.element-animation');
-
-for (let elm of elements) {
-  observer.observe(elm);
-}
-/*end animation========*/
