@@ -56,6 +56,7 @@ var swiper = new Swiper(".intro__slider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   loop: true,
+  allowTouchMove: false,
   // navigation: {
   //   nextEl: ".swiper-button-next",
   //   prevEl: ".swiper-button-prev",
@@ -129,4 +130,27 @@ function closeAllAccordions() {
     item.classList.remove("active");
   });
 }
+
+//header
+const navOffset = $(".header").offset().top + 200;
+$(window).scroll(function () {
+
+  const scrolled = $(this).scrollTop();
+
+  if (scrolled > navOffset) {
+    $('header').addClass("sticky");
+  } else if (scrolled < navOffset) {
+    $('header').removeClass("sticky");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const header = document.querySelector("header");
+  if (header) {
+    const nextElement = header.nextElementSibling;
+    if (nextElement) {
+      nextElement.classList.add("margin-top");
+    }
+  }
+});
 
