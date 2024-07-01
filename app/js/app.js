@@ -86,26 +86,31 @@ var swiper2 = new Swiper(".product__slider", {
 document.querySelector(".header__menu-btn").addEventListener("click", function () {
   document.querySelector(".header nav").classList.toggle("open");
   this.classList.toggle("active");
+  document.querySelector("header").classList.toggle("active");
   document.body.classList.toggle("lock");
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuItems = document.querySelectorAll(".menu-item-has-children");
 
-  menuItems.forEach(function (menuItem) {
-    menuItem.addEventListener("click", function () {
-      const subMenu = menuItem.querySelector(".sub-menu");
-      if (subMenu) {
-        if (subMenu.style.display === "flex") {
-          subMenu.style.display = "none";
-        } else {
-          subMenu.style.display = "flex";
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth < 1200) {
+    const menuItems = document.querySelectorAll(".menu-item-has-children");
+
+    menuItems.forEach(function (menuItem) {
+      menuItem.addEventListener("click", function () {
+        const subMenu = menuItem.querySelector(".sub-menu");
+        if (subMenu) {
+          if (subMenu.style.display === "flex") {
+            subMenu.style.display = "none";
+          } else {
+            subMenu.style.display = "flex";
+          }
         }
-      }
+      });
     });
-  });
+  }
 });
+
 
 /*accordion*/
 document.addEventListener("DOMContentLoaded", function () {
