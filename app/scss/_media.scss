@@ -174,14 +174,17 @@
     display: none;
     margin: 20px 0 0 0;
     border-radius: 10px !important;
+
     li {
       margin: 0 !important;
     }
-    li:first-child{
-      a{
+
+    li:first-child {
+      a {
         border-radius: 10px 10px 0 0;
       }
     }
+
     a {
       padding: 12px 5px 12px 25px;
     }
@@ -318,6 +321,9 @@
     }
   }
 
+  .timetable ul li span {
+    font-size: 16px;
+  }
 }
 
 
@@ -562,9 +568,6 @@
     font-size: 14px;
   }
 
-  .timetable ul li span {
-    font-size: 16px;
-  }
 
   .timetable ul li {
     padding: 15px;
@@ -709,7 +712,7 @@
 
   .timetable ul li span {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .u-talent__left .btn {
@@ -764,7 +767,8 @@
   .intro__left .swiper-button-next {
     right: -458px;
   }
-  .team-line--team{
+
+  .team-line--team {
     margin: 0 0 25px !important;
   }
 }
@@ -1268,7 +1272,13 @@
     max-width: 100%;
   }
 
+  .intro__left {
+    min-height: auto;
+  }
 
+  .form__input-wrap div {
+    font-size: 12px;
+  }
 }
 
 
@@ -1421,7 +1431,8 @@
     height: 150px;
     border-radius: 20px;
   }
-  .about__items{
+
+  .about__items {
     margin: 40px 0 -40px -55px;
   }
 }
