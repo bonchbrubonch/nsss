@@ -185,7 +185,6 @@
       position: absolute;
       z-index: 99;
       right: -520px;
-      // left: 400px;
       background-color: #0E0A01;
       border: 15px solid #FFFAF3;
       border-radius: 50%;
@@ -219,6 +218,11 @@
     margin: 0 0 60px 0;
     display: flex;
     align-items: center;
+  }
+
+  .btn {
+    height: auto;
+    padding: 18px 30px;
   }
 
   .btn--yellow {
@@ -1691,7 +1695,7 @@
     margin: 0 0 20px 0;
 
     li {
-      margin: 0 0 5px 0;
+      margin: 0 0 22px 0;
       position: relative;
       padding: 0 0 0 20px;
       color: rgb(14, 10, 1);
@@ -1711,6 +1715,31 @@
       }
     }
 
+  }
+
+  &--school {
+    .preference__left {
+      background-color: #E6F0F0;
+      ul li::after {
+        background-color: #0095D4;
+      }
+      h3{
+        color: #0095D4;
+      }
+
+    }
+
+    .preference__right {
+      h3 {
+        color: #FFCC40;
+      }
+
+      background-color: #FFF5E1;
+
+      ul li::after {
+        background-color: #FFCC40;
+      }
+    }
   }
 
   &--one {
@@ -2316,7 +2345,7 @@
     background-color: #FFF6E7;
 
     .u-plus__list {
-      &>li {
+      &>div {
         width: calc(33.33333% - 25px);
       }
 
@@ -2672,6 +2701,13 @@
 /*end u-study==========*/
 
 /*start about============*/
+.about-page{
+  font-size: 16px;
+  ul li,
+  ol li{
+    font-size: 16px !important;
+  }
+}
 .about {
   p {
     margin: 0 0 15px 0;
@@ -3050,6 +3086,10 @@
 
   &__coll:nth-child(5) {
     max-width: 190px;
+
+    .social--mob {
+      display: none;
+    }
   }
 
   &__title {

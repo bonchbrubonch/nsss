@@ -39,6 +39,12 @@
 }
 
 @media (max-width: 1200px) {
+  .menu-item-has-children::after {
+    background-image: url("../images/dest/icons/arrow-down-white.svg");
+    width: 13px;
+    height: 6px;
+  }
+
   .header__mob {
     display: flex;
   }
@@ -201,12 +207,19 @@
     }
   }
 
+  .header__mob {
+    .btn {
+      color: #0e0a01;
+    }
+  }
+
   .header__nav>ul li a,
   .header__nav>ul li span {
     display: block;
     padding: 15px 35px 15px 20px;
-    background-color: #FEF1DE;
+    background-color: rgba(#0095d4, .5);
     width: 100%;
+    color: #fff;
   }
 
   .header__nav>ul li span {
@@ -382,7 +395,7 @@
   }
 
   .u-item p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   h3 {
@@ -771,6 +784,14 @@
   .team-line--team {
     margin: 0 0 25px !important;
   }
+
+  .intro .btn {
+    padding: 12px 30px;
+  }
+
+  .work-join ul li {
+    margin: 0 0 15px 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1012,7 +1033,7 @@
     width: calc(33.33333% - 25px);
   }
 
-  .u-plus--school .u-plus__list>li {
+  .u-plus--school .u-plus__list>div {
     width: calc(50% - 25px);
   }
 
@@ -1179,12 +1200,21 @@
   }
 
   body {
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .about-page {
+    font-size: 15px;
+  }
+
+  .about-page ol li,
+  .about-page ul li {
+    font-size: 15px !important;
   }
 
   ul li,
   ol li {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   .list li {
@@ -1279,6 +1309,7 @@
   .form__input-wrap div {
     font-size: 12px;
   }
+
 }
 
 
@@ -1346,7 +1377,7 @@
     zoom: .4;
   }
 
-  .u-plus--school .u-plus__list>li {
+  .u-plus--school .u-plus__list>div {
     width: calc(100% - 25px);
   }
 
@@ -1392,7 +1423,7 @@
 
 
     li {
-      width: 50%;
+      width: 33.33333%;
     }
   }
 
