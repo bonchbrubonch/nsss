@@ -2730,7 +2730,7 @@
     margin: 0 0 20px 0;
 
     li {
-      margin: 0 0 5px 0;
+      margin: 0 0 12px 0;
       position: relative;
       padding: 0 0 0 20px;
       color: rgb(14, 10, 1);
@@ -2741,7 +2741,7 @@
       &::after {
         content: "";
         position: absolute;
-        top: 7px;
+        top: 8px;
         left: 0;
         width: 5px;
         height: 5px;
@@ -2754,6 +2754,10 @@
   .list--row {
     li {
       margin: 0 25px 15px 0;
+    }
+    li::after {
+      top: 50%;
+      transform: rotate(45deg) translateY(-50%);
     }
   }
 

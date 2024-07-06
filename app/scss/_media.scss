@@ -40,7 +40,7 @@
 
 @media (max-width: 1200px) {
   .menu-item-has-children::after {
-    background-image: url("../images/dest/icons/arrow-down-white.svg");
+    background-image: url("../images/dest/icons/arrow-down.svg");
     width: 13px;
     height: 6px;
   }
@@ -217,9 +217,8 @@
   .header__nav>ul li span {
     display: block;
     padding: 15px 35px 15px 20px;
-    background-color: rgba(#0095d4, .5);
+    background-color: rgba(0, 149, 212, 0.1);
     width: 100%;
-    color: #fff;
   }
 
   .header__nav>ul li span {
@@ -1199,10 +1198,6 @@
     }
   }
 
-  body {
-    font-size: 14px;
-  }
-
   .about-page {
     font-size: 15px;
   }
@@ -1309,7 +1304,9 @@
   .form__input-wrap div {
     font-size: 12px;
   }
-
+  .footer__inner{
+    justify-content: flex-start;
+  }
 }
 
 
@@ -1423,7 +1420,7 @@
 
 
     li {
-      width: 33.33333%;
+      width: 30.33333%;
     }
   }
 
