@@ -45,6 +45,7 @@
 
         a,
         span {
+          position: relative;
           display: flex;
           padding: 30px 0;
           color: rgb(14, 10, 1);
@@ -52,6 +53,8 @@
           font-weight: 500;
           line-height: 19px;
           cursor: pointer;
+          transition: linear .2s;
+          width: fit-content;
         }
       }
     }
@@ -147,10 +150,15 @@
 
   .swiper-slide {
     background-color: #FFFAF3;
+    height: auto;
   }
 
   .product__slider {
     position: relative;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -707,7 +715,6 @@
     a {
       display: flex;
       align-items: flex-start;
-      align-items: center;
       img {
         margin: 0 25px 0 0;
         width: 20px;
@@ -743,6 +750,9 @@
 
     ul li {
       border-bottom: 1px solid rgb(14, 10, 1);
+      a{
+        align-items: center;
+      }
     }
 
     .u-contacts__right {
@@ -1325,7 +1335,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px 25px;
-    height: 55px;
+    // height: 55px;
     color: rgb(14, 10, 1);
     font-family: 'Appetite';
     font-size: 18px;
@@ -3160,5 +3170,7 @@
 }
 
 /*end footer===============*/
-
+.u-contacts ul:nth-child(5) li a {
+  font-size: 15px !important;
+}
 @import "media";

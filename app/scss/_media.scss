@@ -6,13 +6,20 @@
 
     a {
       padding: 10px 5px !important;
-      font-size: 14px !important;
+      font-size: 15px !important;
+    }
+  }
+
+  .header__nav>ul>li>a,
+  .header__nav>ul>li>span {
+    &::after {
+      bottom: 25px !important;
     }
   }
 
   .menu-item-has-children ul {
     padding: 20px 30px;
-    width: 245px;
+    width: 275px;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -35,7 +42,41 @@
     opacity: 1;
   }
 
+  .header__nav {
+    &>ul {
+      li {
+        a,
+        span {
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0px;
+            height: 2px;
+            background-color: #0095D4;
+            width: 0;
+            transition: linear .2s;
+          }
 
+          &:hover {
+            color: #0095D4;
+            &::after{
+              width: 100%;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu-item-has-children{
+    &:hover{
+      &::after{
+        background-image: url("../images/dest/icons/arrow-down-blue.svg");
+      }
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1374,20 +1415,27 @@
   .u-program.u-program--flex-start {
     padding: 25px 0 40px;
   }
-  .u-program.u-program--flex-start.u-program--pink{
+
+  .u-program.u-program--flex-start.u-program--pink {
     padding: 70px 0 40px;
   }
+
   .pool {
     padding: 70px 0 0;
     margin: 0 0 -15px 0;
+  }
+  .instruction.instruction--blue{
+    padding: 70px 0 40px;
+  }
+  .instruction.instruction--blue + .meet{
+      padding: 40px 0 15px;
   }
 }
 
 
 @media (max-width: 576px) {
   .team__img+h6 {
-    padding: 10px 22px;
-    height: 35px;
+    padding: 10px 15px;
     margin: -25px auto 0 auto;
 
   }
@@ -1521,6 +1569,7 @@
     width: 45px;
     height: 45px;
     border: 8px solid #fffaf3;
+    right: 12%;
 
     img {
       width: 100%;
@@ -1542,5 +1591,11 @@
 
   .about__items {
     margin: 40px 0 -40px -55px;
+  }
+
+  .intro__left .swiper-button-next::after {
+    width: 57px;
+    height: 64px;
+    left: 56%;
   }
 }
